@@ -1,0 +1,49 @@
+.todo{
+  display: flex;
+  border: 2px solid white;
+  margin: 4px;
+  padding: 0px 4px;
+}
+
+.todo span{
+  flex-grow: 1;
+  color: white;
+  padding: 4px 0px;
+}
+
+.todo form{
+  width: 100%;
+  display: flex;
+}
+
+.todo form input{
+  flex-grow: 1;
+}
+
+.btn-remove{
+  width: 8%;
+  font-size: 0.8rem;
+  background-color: rgb(206, 49, 49);
+}
+
+.btn-edit{
+  width: 8%;
+  font-size: 0.8rem;
+  background-color: rgb(69, 69, 187);
+}
+
+.btn-save{
+  width: 16%;
+  font-size: 0.8rem;
+  background-color: rgb(52, 52, 190);
+}
+
+button{
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.completed{
+  text-decoration: line-through;
+}

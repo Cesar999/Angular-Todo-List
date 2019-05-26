@@ -1,0 +1,20 @@
+<div>
+  <div *ngIf="!isEditing" class="todo">
+    <span  (click)="toggleComplete()"
+    [ngClass]="(todo.completed)?'completed':'not-completed'"
+    >{{todo.task}}
+    </span>
+    <button (click)="onEdit()" class="btn-edit"><i class="fas fa-edit"></i></button>
+    <button (click)="onRemove()" class="btn-remove"><i class="fas fa-trash-alt"></i></button>
+  </div>
+
+  <div *ngIf="isEditing" class="todo">
+    <form [formGroup]="editForm" (ngSubmit)="onUpdate()">
+      <input
+        type="text"
+        formControlName="task"
+      >
+      <button type="submit" class="btn-save">Save</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="todo-list">
+  <i class="fab fa-angular"></i>
+  <app-new-todo-form
+    (newTask)="onNewTask($event)"
+  ></app-new-todo-form>
+  <hr />
+  <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <app-todo cdkDrag *ngFor="let todo of todos"
+    [todo]="todo"
+    (removeTask)="onRemoveTask($event)"
+    (editTask)="onEditTask($event)"
+  ></app-todo>
+  </div>
+</div>
